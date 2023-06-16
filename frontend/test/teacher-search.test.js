@@ -6,9 +6,9 @@ fixture`Testing Teacher UI`
 
 test('Testing search Teachers', async t => {
     await t.navigateTo("/");
-    await t.typeText("teacher-search", "su");
+    await t.typeText(Selector("#teacher-search"), "su");
 
-    const table = Selector('teacher-table')
+    const table = Selector('#teacher-table')
     const rowCount = await table.find('tr').count;
 
     let tdText = await table.find('tr').nth(rowCount-1).innerText;
