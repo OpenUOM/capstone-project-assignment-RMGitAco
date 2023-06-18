@@ -6,7 +6,7 @@ fixture`Testing Student UI`
 
 test('Testing add students', async t => {
 
-    await t.navigateTo("/dbinitialize");
+    await t.navigateTo("/");
 
     await t.navigateTo("/addStudent");
     await t.typeText(Selector("#student-id"), "999999");
