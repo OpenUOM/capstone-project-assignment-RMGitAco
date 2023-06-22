@@ -9,6 +9,7 @@ test('Testing add students', async t => {
     await t.navigateTo("/");
 
     await t.navigateTo("/addStudent");
+    await t.expect(Selector("#student-id").exists).ok();
     await t.typeText(Selector("#student-id"), "999999");
     await t.typeText(Selector("#student-name"), "Pasindu Basnayaka");
     await t.typeText(Selector("#student-age"), "45");
