@@ -4,13 +4,12 @@ process.env.NODE_ENV = "test";
 fixture`Testing Student UI`
     .page`http://localhost:4401/student`
 
-test('Testing add students', async t => {
+test('app-add-new-student', async t => {
 
     await t.navigateTo("/");
 
-    
-    await t.click(Selector("app-navbar").withAttribute("title", "Add New Student"));
-    await t.typeText(Selector("#student-id"), "999999");
+    await t.navigateTo("/addStudent");
+    await t.typeText("#student-id", "999999");
     await t.typeText(Selector("#student-name"), "Pasindu Basnayaka");
     await t.typeText(Selector("#student-age"), "45");
     await t.typeText(Selector("#student-Hometown"), "Catholic");
