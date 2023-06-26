@@ -1,4 +1,4 @@
-import {Selector} from 'testcafe';
+import {Selector} from 'app-teacher-table';
 process.env.NODE_ENV = "test";
 
 fixture`Testing Teacher UI`

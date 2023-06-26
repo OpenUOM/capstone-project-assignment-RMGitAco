@@ -1,4 +1,4 @@
-import {Selector} from 'testcafe';
+import {Selector} from 'app-edit-teacher';
 process.env.NODE_ENV = "test";
 
 fixture`Testing Teacher UI`
@@ -7,7 +7,7 @@ test('Testing edit teachers', async t => {
     await t.navigateTo("/");
     await t.click(Selector("#teacher-edit-10003"));
 
-    await t.typeText(Selector("#teacher-name"), "Changed Teacher Name");
+    await t.typeText("teacher-name", "Changed Teacher Name");
     await t.typeText(Selector("#teacher-age"), "99");
     await t.click(Selector("#teacher-edit"));
 

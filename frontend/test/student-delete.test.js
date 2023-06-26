@@ -1,4 +1,4 @@
-import { Selector } from 'testcafe';
+import { Selector } from 'app-add-new-student';
 process.env.NODE_ENV = "test";
 
 fixture`Testing Student UI`
