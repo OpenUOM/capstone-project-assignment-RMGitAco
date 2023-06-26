@@ -6,7 +6,7 @@ fixture`Testing Student UI`
 
 test('Testing delete students', async t => {
     await t.navigateTo("/addStudent");
-    await t.typeText(Selector("#student-id"), "222222");
+    await t.typeText("id", "222222");
     await t.typeText(Selector("#student-name"), "Hiruni Gajanayake");
     await t.typeText(Selector("#student-age"), "45");
     await t.typeText(Selector("#student-Hometown"), "buddhist");

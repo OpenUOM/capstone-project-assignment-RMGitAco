@@ -9,10 +9,10 @@ test('Testing add students', async t => {
     await t.navigateTo("/");
 
     await t.navigateTo("/addStudent");
-    await t.typeText("id", "999999");
-    await t.typeText("name", "Pasindu Basnayaka");
-    await t.typeText("age", "45");
-    await t.typeText("hometown", "Catholic");
+    await t.typeText( id, "999999");
+    await t.typeText(Selector("#student-name"), "Pasindu Basnayaka");
+    await t.typeText(Selector("#student-age"), "45");
+    await t.typeText(Selector("#student-Hometown"), "Catholic");
     await t.click(Selector("#student-add"));
 
     await t.navigateTo("/student");
