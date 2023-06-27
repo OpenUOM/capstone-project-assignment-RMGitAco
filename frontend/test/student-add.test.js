@@ -1,4 +1,4 @@
-import { Selector } from 'app-add-new-student';
+import { Selector } from 'testcafe';
 process.env.NODE_ENV = "test";
 
 fixture`Testing Student UI`
@@ -6,14 +6,14 @@ fixture`Testing Student UI`
 
 test('Testing add students', async t => {
 
-    await t.navigateTo("/");
+    await t.navigateTo("/dbinitialize");
 
     await t.navigateTo("/addStudent");
-    await t.typeText( id, "999999");
-    await t.typeText(Selector("#student-name"), "Pasindu Basnayaka");
-    await t.typeText(Selector("#student-age"), "45");
-    await t.typeText(Selector("#student-Hometown"), "Catholic");
-    await t.click(Selector("#student-add"));
+    await t.typeText("#student-id", "999999");
+    await t.typeText("#student-name", "Pasindu Basnayaka");
+    await t.typeText("#student-age", "45");
+    await t.typeText("#student-Hometown", "Catholic");
+    await t.click("#student-add");
 
     await t.navigateTo("/student");
 

@@ -1,4 +1,4 @@
-import { Selector } from 'app-add-new-student';
+import { Selector } from 'testcafe';
 process.env.NODE_ENV = "test";
 
 fixture`Testing Student UI`
@@ -6,15 +6,15 @@ fixture`Testing Student UI`
 
 test('Testing delete students', async t => {
     await t.navigateTo("/addStudent");
-    await t.typeText("id", "222222");
-    await t.typeText(Selector("#student-name"), "Hiruni Gajanayake");
-    await t.typeText(Selector("#student-age"), "45");
-    await t.typeText(Selector("#student-Hometown"), "buddhist");
-    await t.click(Selector("#student-add"));
+    await t.typeText("#student-id", "222222");
+    await t.typeText("#student-name", "Hiruni Gajanayake");
+    await t.typeText("#student-age", "45");
+    await t.typeText("#student-Hometown", "buddhist");
+    await t.click("#student-add");
 
     await t.navigateTo("/student");
 
-    await t.click(Selector("#student-delete-222222"));
+    await t.click("#student-delete-222222");
 
     const table = Selector('#student-table')
     const rowCount = await table.find('tr').count;
